@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- Chosen Palette: PLS Premium Dark. -->
-    <!-- Application Structure Plan: Mobile First Optimization applied. Stacked layouts for tables, adjusted typography scales. -->
+    <!-- Application Structure Plan: Mobile First Optimization applied. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <script>
@@ -63,11 +63,6 @@
             box-shadow: 0 0 25px rgba(245, 157, 36, 0.6);
             transform: translateY(-2px);
         }
-        /* Ajuste para garantir leitura em telas muito pequenas */
-        @media (max-width: 380px) {
-            h1 { font-size: 2.25rem !important; }
-            h2 { font-size: 1.8rem !important; }
-        }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
@@ -90,8 +85,8 @@
                 Proposta Confidencial &bull; Samuel & Tio Renato
             </div>
             
-            <!-- Headline Otimizada para Mobile -->
-            <h1 class="text-4xl xs:text-5xl md:text-7xl font-black mb-6 leading-tight text-white">
+            <!-- Headline Otimizada: Ajustei de text-4xl para text-3xl base para garantir que 'Posicionamento' caiba -->
+            <h1 class="text-3xl xs:text-4xl md:text-7xl font-black mb-6 leading-tight text-white break-words">
                 A PLS Aviação Merece um <br class="hidden md:block">
                 <span class="text-gradient block mt-2">Posicionamento de Elite.</span>
             </h1>
@@ -261,7 +256,7 @@
                     </div>
                 </div>
 
-                <!-- CTA Botão Atualizado -->
+                <!-- CTA Botão Atualizado com a Mensagem Correta -->
                 <div class="p-6 md:p-8 text-center bg-gradient-to-b from-transparent to-black/40">
                     <a href="https://wa.me/557781539804?text=Oi%2C%20vi%20a%20proposta%20referente%20ao%20site%20da%20PLS.%20Vamos%20fechar%20o%20pacote%20de%203k%20com%20os%20b%C3%B4nus%20at%C3%A9%20dia%2005.%20Podemos%20negociar%20o%20pagamento%3F" target="_blank" class="glow-button w-full inline-flex justify-center bg-pls-gold text-pls-dark font-black text-lg md:text-2xl py-5 px-6 rounded-xl uppercase tracking-wider hover:bg-white transition-colors whitespace-normal leading-tight">
                         Aceitar Proposta & Garantir Bônus
