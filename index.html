@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- Chosen Palette: PLS Premium Dark. -->
-    <!-- Application Structure Plan: Design "Luxury Dark" com foco em conversão High-Ticket. -->
+    <!-- Application Structure Plan: Mobile First Optimization applied. Stacked layouts for tables, adjusted typography scales. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <script>
@@ -28,6 +28,9 @@
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
+                    },
+                    screens: {
+                        'xs': '375px', // Breakpoint extra pequeno para iPhone SE/antigos
                     }
                 }
             }
@@ -60,80 +63,87 @@
             box-shadow: 0 0 25px rgba(245, 157, 36, 0.6);
             transform: translateY(-2px);
         }
+        /* Ajuste para garantir leitura em telas muito pequenas */
+        @media (max-width: 380px) {
+            h1 { font-size: 2.25rem !important; }
+            h2 { font-size: 1.8rem !important; }
+        }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased overflow-x-hidden">
 
     <!-- Top Bar de Urgência -->
-    <div class="bg-gradient-to-r from-pls-green to-pls-dark border-b border-pls-green/30 text-center py-2 px-4 sticky top-0 z-50">
-        <p class="text-xs md:text-sm font-bold tracking-widest uppercase text-white">
-            <span class="text-pls-gold mr-2">⚡ OPORTUNIDADE EXCLUSIVA:</span> Condição válida somente até <span class="underline decoration-pls-gold">05 de Dezembro</span>
+    <div class="bg-gradient-to-r from-pls-green to-pls-dark border-b border-pls-green/30 text-center py-3 px-2 sticky top-0 z-50">
+        <p class="text-xs font-bold tracking-widest uppercase text-white leading-tight">
+            <span class="text-pls-gold block sm:inline mr-0 sm:mr-2">⚡ OPORTUNIDADE EXCLUSIVA:</span>
+            Válido até <span class="underline decoration-pls-gold">05/12</span>
         </p>
     </div>
 
     <!-- Hero Section -->
-    <header class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <header class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-4">
         <div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/0a140d/386a2c?text=Tecnologia+Agro')] bg-cover bg-center opacity-20"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#0a140d] via-[#0a140d]/80 to-transparent"></div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center max-w-5xl">
-            <div class="inline-block px-4 py-1 rounded-full border border-pls-gold/30 bg-pls-gold/10 text-pls-gold text-xs font-bold tracking-[0.2em] mb-6 uppercase">
+        <div class="container mx-auto relative z-10 text-center max-w-5xl pt-8 pb-12">
+            <div class="inline-block px-3 py-1 rounded-full border border-pls-gold/30 bg-pls-gold/10 text-pls-gold text-[10px] sm:text-xs font-bold tracking-[0.15em] mb-6 uppercase">
                 Proposta Confidencial &bull; Samuel & Tio Renato
             </div>
             
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight text-white">
-                A PLS Aviação Merece um <br>
-                <span class="text-gradient">Posicionamento de Elite.</span>
+            <!-- Headline Otimizada para Mobile -->
+            <h1 class="text-4xl xs:text-5xl md:text-7xl font-black mb-6 leading-tight text-white">
+                A PLS Aviação Merece um <br class="hidden md:block">
+                <span class="text-gradient block mt-2">Posicionamento de Elite.</span>
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-400 font-light max-w-3xl mx-auto mb-10">
-                Não é apenas um site. É a construção da <strong class="text-white">Autoridade Digital</strong> que vai blindar a marca contra a concorrência e atrair os maiores produtores da região.
+            <p class="text-lg md:text-2xl text-gray-400 font-light max-w-3xl mx-auto mb-10 px-2">
+                Não é apenas um site. É a construção da <strong class="text-white">Autoridade Digital</strong> que vai blindar a marca e atrair os maiores produtores.
             </p>
 
-            <a href="#oferta" class="glow-button inline-flex items-center bg-pls-gold text-pls-dark font-bold text-lg px-10 py-4 rounded-full">
-                Ver a Estratégia Completa
+            <a href="#oferta" class="glow-button w-full sm:w-auto inline-flex justify-center items-center bg-pls-gold text-pls-dark font-bold text-lg px-8 py-4 rounded-xl sm:rounded-full">
+                Ver a Estratégia
                 <span class="ml-2 text-xl">↓</span>
             </a>
         </div>
     </header>
 
     <!-- O Problema (Gap) -->
-    <section class="py-24 relative">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <section class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-3xl font-bold mb-6 text-white border-l-4 border-pls-green pl-6">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white border-l-4 border-pls-green pl-6">
                     O Cenário Atual: <br>
                     <span class="text-gray-400">Excelência Invisível</span>
                 </h2>
-                <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                <p class="text-gray-300 text-base md:text-lg mb-4 leading-relaxed">
                     Hoje, a PLS tem a frota, a tecnologia e os pilotos. Mas no mundo digital, <strong>a percepção é realidade.</strong>
                 </p>
-                <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-                    Sem um site de alto padrão ("High-End"), a PLS é comparada com concorrentes menores que possuem uma "vitrine" melhor. Estamos deixando dinheiro na mesa e permitindo que outros ocupem o espaço de autoridade no Google.
+                <p class="text-gray-300 text-base md:text-lg mb-6 leading-relaxed">
+                    Sem um site de alto padrão, a PLS é comparada com concorrentes menores. Estamos deixando dinheiro na mesa.
                 </p>
             </div>
-            <div class="glass-card p-8 rounded-2xl relative">
-                <div class="absolute -top-4 -right-4 bg-pls-gold text-pls-dark font-bold px-4 py-1 rounded-lg shadow-lg text-sm">O OBJETIVO</div>
-                <ul class="space-y-6">
+            <div class="glass-card p-6 md:p-8 rounded-2xl relative mt-4 md:mt-0">
+                <div class="absolute -top-3 right-4 bg-pls-gold text-pls-dark font-bold px-3 py-1 rounded-lg shadow-lg text-xs">O OBJETIVO</div>
+                <ul class="space-y-6 mt-2">
                     <li class="flex items-start">
-                        <span class="text-2xl mr-4 text-pls-light">01.</span>
+                        <span class="text-2xl mr-4 text-pls-light font-black">01</span>
                         <div>
                             <h4 class="font-bold text-white text-lg">Dominância Visual</h4>
-                            <p class="text-sm text-gray-400">Um design que grita "Tecnologia e Confiança" assim que o cliente abre a página.</p>
+                            <p class="text-sm text-gray-400">Design que grita "Confiança" ao abrir a página.</p>
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-2xl mr-4 text-pls-light">02.</span>
+                        <span class="text-2xl mr-4 text-pls-light font-black">02</span>
                         <div>
-                            <h4 class="font-bold text-white text-lg">Máquina de Orçamentos</h4>
-                            <p class="text-sm text-gray-400">Estrutura desenhada psicologicamente para converter visitantes em pedidos de voo.</p>
+                            <h4 class="font-bold text-white text-lg">Máquina de Vendas</h4>
+                            <p class="text-sm text-gray-400">Estrutura que converte visitantes em orçamentos.</p>
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-2xl mr-4 text-pls-light">03.</span>
+                        <span class="text-2xl mr-4 text-pls-light font-black">03</span>
                         <div>
                             <h4 class="font-bold text-white text-lg">Legado Digital</h4>
-                            <p class="text-sm text-gray-400">Uma plataforma que cresce com a empresa, preparada para os próximos 5 anos.</p>
+                            <p class="text-sm text-gray-400">Plataforma pronta para os próximos 5 anos.</p>
                         </div>
                     </li>
                 </ul>
@@ -142,102 +152,122 @@
     </section>
 
     <!-- A Solução (O Site High-Ticket) -->
-    <section class="py-20 bg-black/30">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h3 class="text-3xl font-bold text-white mb-4">O Novo Padrão PLS</h3>
-                <p class="text-gray-400">O que está incluso no desenvolvimento "High-Ticket"</p>
+    <section class="py-16 bg-black/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">O Novo Padrão PLS</h3>
+                <p class="text-gray-400 text-sm md:text-base">O que está incluso no pacote "High-Ticket"</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-xl hover:bg-white/5 transition duration-300">
-                    <div class="text-4xl mb-4 grayscale hover:grayscale-0 transition duration-300">📱</div>
-                    <h4 class="text-xl font-bold text-white mb-2">Mobile First Premium</h4>
-                    <p class="text-gray-400 text-sm">Seu cliente está no campo, com o celular na mão. O site será mais rápido e bonito no iPhone/Android do que no computador.</p>
+            <div class="grid gap-4 md:grid-cols-3 md:gap-6">
+                <div class="glass-card p-6 rounded-xl flex flex-row md:flex-col items-center md:items-start gap-4">
+                    <div class="text-3xl md:text-4xl md:mb-4 grayscale hover:grayscale-0 transition duration-300">📱</div>
+                    <div>
+                        <h4 class="text-lg md:text-xl font-bold text-white mb-1">Mobile First</h4>
+                        <p class="text-gray-400 text-xs md:text-sm">Perfeito no celular. Essencial para o cliente no campo.</p>
+                    </div>
                 </div>
-                <div class="glass-card p-8 rounded-xl hover:bg-white/5 transition duration-300">
-                    <div class="text-4xl mb-4 grayscale hover:grayscale-0 transition duration-300">🎨</div>
-                    <h4 class="text-xl font-bold text-white mb-2">Design Tech-Rural</h4>
-                    <p class="text-gray-400 text-sm">Uma fusão elegante entre a robustez do agro e a sofisticação da aviação. Cores sóbrias, tipografia moderna.</p>
+                <div class="glass-card p-6 rounded-xl flex flex-row md:flex-col items-center md:items-start gap-4">
+                    <div class="text-3xl md:text-4xl md:mb-4 grayscale hover:grayscale-0 transition duration-300">🎨</div>
+                    <div>
+                        <h4 class="text-lg md:text-xl font-bold text-white mb-1">Design Tech-Rural</h4>
+                        <p class="text-gray-400 text-xs md:text-sm">Fusão elegante entre a força do agro e a tecnologia.</p>
+                    </div>
                 </div>
-                <div class="glass-card p-8 rounded-xl hover:bg-white/5 transition duration-300">
-                    <div class="text-4xl mb-4 grayscale hover:grayscale-0 transition duration-300">⚡</div>
-                    <h4 class="text-xl font-bold text-white mb-2">Velocidade Extrema</h4>
-                    <p class="text-gray-400 text-sm">Otimização total de código. O site carrega instantaneamente, essencial para áreas com conexão 3G/4G.</p>
+                <div class="glass-card p-6 rounded-xl flex flex-row md:flex-col items-center md:items-start gap-4">
+                    <div class="text-3xl md:text-4xl md:mb-4 grayscale hover:grayscale-0 transition duration-300">⚡</div>
+                    <div>
+                        <h4 class="text-lg md:text-xl font-bold text-white mb-1">Velocidade</h4>
+                        <p class="text-gray-400 text-xs md:text-sm">Carregamento instantâneo mesmo no 4G.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- A OFERTA GRAND SLAM (Hormozi Style) -->
-    <section id="oferta" class="py-24 relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pls-green/20 rounded-full blur-[120px] -z-10"></div>
+    <!-- A OFERTA GRAND SLAM (Hormozi Style) - Mobile Optimized Table -->
+    <section id="oferta" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pls-green/20 rounded-full blur-[100px] -z-10"></div>
 
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-12">
-                <span class="text-pls-gold font-bold tracking-wider uppercase text-sm">OFERTA DE PARCERIA ESTRATÉGICA</span>
-                <h2 class="text-5xl font-black text-white mt-2">O Empilhamento de Valor</h2>
-                <p class="text-gray-400 mt-4">Veja exatamente o que vocês vão receber e quanto realmente vale.</p>
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-8 md:mb-12">
+                <span class="text-pls-gold font-bold tracking-wider uppercase text-xs">OFERTA DE PARCERIA</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mt-2">O Que Vocês Recebem</h2>
+                <p class="text-gray-400 mt-2 text-sm md:text-base">Valor real x Investimento de parceiro.</p>
             </div>
 
-            <div class="glass-card rounded-3xl overflow-hidden border border-pls-gold/30">
-                <div class="grid grid-cols-4 bg-white/5 p-6 border-b border-white/10 text-sm font-bold text-gray-400 uppercase tracking-wide">
+            <div class="glass-card rounded-2xl md:rounded-3xl overflow-hidden border border-pls-gold/30">
+                <!-- Cabeçalho (Escondido no mobile para economizar espaço) -->
+                <div class="hidden md:grid grid-cols-4 bg-white/5 p-6 border-b border-white/10 text-sm font-bold text-gray-400 uppercase tracking-wide">
                     <div class="col-span-3">Item Incluso</div>
                     <div class="col-span-1 text-right">Valor de Mercado</div>
                 </div>
 
-                <div class="grid grid-cols-4 p-6 border-b border-white/5 items-center">
-                    <div class="col-span-3">
-                        <h4 class="text-xl font-bold text-white">Desenvolvimento Web High-End (Institucional)</h4>
-                        <p class="text-sm text-gray-500 mt-1">Design exclusivo, copywriting persuasivo, otimização mobile, integração WhatsApp.</p>
+                <!-- Item Principal -->
+                <div class="flex flex-col md:grid md:grid-cols-4 p-5 md:p-6 border-b border-white/5 items-start md:items-center gap-2">
+                    <div class="col-span-3 w-full">
+                        <h4 class="text-lg md:text-xl font-bold text-white">Site Institucional High-End</h4>
+                        <p class="text-xs md:text-sm text-gray-500 mt-1">Design exclusivo, copywriting, otimização mobile, integração WhatsApp.</p>
                     </div>
-                    <div class="col-span-1 text-right text-lg font-medium text-gray-300">R$ 5.000,00</div>
+                    <div class="col-span-1 w-full md:text-right text-lg font-medium text-gray-300 flex justify-between md:block mt-2 md:mt-0">
+                        <span class="md:hidden text-gray-500 text-sm uppercase font-bold">Valor:</span>
+                        R$ 5.000,00
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-4 p-6 border-b border-white/5 items-center bg-pls-green/10">
-                    <div class="col-span-3">
-                        <div class="flex items-center gap-3">
-                            <span class="bg-pls-gold text-pls-dark text-xs font-bold px-2 py-1 rounded">BÔNUS #1</span>
-                            <h4 class="text-xl font-bold text-white">1 Ano de Suporte & Manutenção VIP</h4>
+                <!-- BÔNUS 1 -->
+                <div class="flex flex-col md:grid md:grid-cols-4 p-5 md:p-6 border-b border-white/5 items-start md:items-center bg-pls-green/10 gap-2">
+                    <div class="col-span-3 w-full">
+                        <div class="flex flex-wrap items-center gap-2 md:gap-3 mb-1">
+                            <span class="bg-pls-gold text-pls-dark text-[10px] font-bold px-2 py-0.5 rounded uppercase">BÔNUS #1</span>
+                            <h4 class="text-lg md:text-xl font-bold text-white">1 Ano Suporte VIP</h4>
                         </div>
-                        <p class="text-sm text-gray-400 mt-1">Atualizações de texto, troca de fotos, monitoramento de segurança e backup mensal. Vocês não se preocupam com nada.</p>
+                        <p class="text-xs md:text-sm text-gray-400">Backup, segurança e atualizações. Zero dor de cabeça.</p>
                     </div>
-                    <div class="col-span-1 text-right text-lg font-medium text-pls-gold">R$ 2.400,00</div>
+                    <div class="col-span-1 w-full md:text-right text-lg font-medium text-pls-gold flex justify-between md:block mt-2 md:mt-0">
+                         <span class="md:hidden text-gray-500 text-sm uppercase font-bold">Valor:</span>
+                        R$ 2.400,00
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-4 p-6 items-center bg-pls-green/20">
-                    <div class="col-span-3">
-                        <div class="flex items-center gap-3">
-                            <span class="bg-pls-gold text-pls-dark text-xs font-bold px-2 py-1 rounded">BÔNUS #2</span>
-                            <h4 class="text-xl font-bold text-white">Plano de Voo: Estratégia de Marketing (1 Mês)</h4>
+                <!-- BÔNUS 2 -->
+                <div class="flex flex-col md:grid md:grid-cols-4 p-5 md:p-6 items-start md:items-center bg-pls-green/20 gap-2">
+                    <div class="col-span-3 w-full">
+                        <div class="flex flex-wrap items-center gap-2 md:gap-3 mb-1">
+                            <span class="bg-pls-gold text-pls-dark text-[10px] font-bold px-2 py-0.5 rounded uppercase">BÔNUS #2</span>
+                            <h4 class="text-lg md:text-xl font-bold text-white">Estratégia de Marketing (1 Mês)</h4>
                         </div>
-                        <p class="text-sm text-gray-400 mt-1">Consultoria de 30 dias: Análise de concorrentes, sugestão de posts para Instagram e script de vendas para WhatsApp.</p>
+                        <p class="text-xs md:text-sm text-gray-400">Análise de concorrentes e scripts de vendas.</p>
                     </div>
-                    <div class="col-span-1 text-right text-lg font-medium text-pls-gold">R$ 2.000,00</div>
+                    <div class="col-span-1 w-full md:text-right text-lg font-medium text-pls-gold flex justify-between md:block mt-2 md:mt-0">
+                         <span class="md:hidden text-gray-500 text-sm uppercase font-bold">Valor:</span>
+                        R$ 2.000,00
+                    </div>
                 </div>
 
-                <div class="bg-white/5 p-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
-                    <div>
-                        <p class="text-gray-400 text-sm uppercase font-bold">Valor Total Entregue</p>
-                        <p class="text-4xl font-black text-gray-500 line-through decoration-pls-gold/50">R$ 9.400,00</p>
+                <!-- Total -->
+                <div class="bg-white/5 p-6 md:p-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+                    <div class="w-full md:w-auto">
+                        <p class="text-gray-400 text-xs uppercase font-bold mb-1">Valor Total Entregue</p>
+                        <p class="text-3xl md:text-4xl font-black text-gray-500 line-through decoration-pls-gold/50">R$ 9.400</p>
                     </div>
                     
-                    <div class="h-12 w-px bg-gray-700 hidden md:block"></div>
+                    <div class="h-px w-full md:h-12 md:w-px bg-gray-700 block"></div>
 
-                    <div>
-                        <p class="text-pls-gold text-sm uppercase font-bold mb-1">Investimento Hoje (Até 05/12)</p>
-                        <p class="text-6xl font-black text-white tracking-tight">R$ 3.000<span class="text-2xl text-gray-400 font-normal">,00</span></p>
-                        <p class="text-xs text-gray-400 mt-1">Parcelamento disponível mediante consulta.</p>
+                    <div class="w-full md:w-auto">
+                        <p class="text-pls-gold text-xs uppercase font-bold mb-1">Hoje (Até 05/12)</p>
+                        <p class="text-5xl md:text-6xl font-black text-white tracking-tight">R$ 3.000<span class="text-2xl text-gray-400 font-normal">,00</span></p>
+                        <p class="text-[10px] text-gray-400 mt-2">Parcelamento disponível mediante consulta.</p>
                     </div>
                 </div>
 
                 <!-- CTA Botão Atualizado -->
-                <div class="p-8 text-center bg-gradient-to-b from-transparent to-black/40">
-                    <a href="https://wa.me/557781539804?text=Oi%2C%20vi%20a%20proposta%20referente%20ao%20site%20da%20PLS.%20Vamos%20fechar%20o%20pacote%20de%203k%20com%20os%20b%C3%B4nus%20at%C3%A9%20dia%2005.%20Podemos%20negociar%20o%20pagamento%3F" target="_blank" class="glow-button w-full md:w-auto inline-block bg-pls-gold text-pls-dark font-black text-2xl py-5 px-16 rounded-xl uppercase tracking-wider hover:bg-white transition-colors">
+                <div class="p-6 md:p-8 text-center bg-gradient-to-b from-transparent to-black/40">
+                    <a href="https://wa.me/557781539804?text=Oi%2C%20vi%20a%20proposta%20referente%20ao%20site%20da%20PLS.%20Vamos%20fechar%20o%20pacote%20de%203k%20com%20os%20b%C3%B4nus%20at%C3%A9%20dia%2005.%20Podemos%20negociar%20o%20pagamento%3F" target="_blank" class="glow-button w-full inline-flex justify-center bg-pls-gold text-pls-dark font-black text-lg md:text-2xl py-5 px-6 rounded-xl uppercase tracking-wider hover:bg-white transition-colors whitespace-normal leading-tight">
                         Aceitar Proposta & Garantir Bônus
                     </a>
-                    <p class="text-gray-500 text-sm mt-4 font-medium">
-                        🔒 Garantia de Satisfação: O design só é aprovado se vocês amarem.
+                    <p class="text-gray-500 text-xs mt-4 font-medium px-4">
+                        🔒 Garantia: O design só é aprovado se vocês amarem.
                     </p>
                 </div>
             </div>
@@ -245,22 +275,22 @@
     </section>
 
     <!-- Urgency Footer -->
-    <section class="py-12 bg-white/5 border-t border-white/10">
-        <div class="container mx-auto px-6 text-center">
-            <h4 class="text-2xl font-bold text-white mb-2">Por que até dia 05 de Dezembro?</h4>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-8">
-                Estamos fechando o cronograma de desenvolvimento do ano. Para garantir a entrega rápida e a dedicação total da equipe de suporte (Bônus #1) e estratégia (Bônus #2), precisamos iniciar o setup na próxima semana. Após essa data, os bônus serão vendidos separadamente.
+    <section class="py-10 bg-white/5 border-t border-white/10 px-4">
+        <div class="container mx-auto text-center">
+            <h4 class="text-xl md:text-2xl font-bold text-white mb-2">Por que até dia 05?</h4>
+            <p class="text-gray-400 text-sm max-w-2xl mx-auto mb-6">
+                Estamos fechando o cronograma anual. Para garantir a entrega rápida e os bônus (Suporte + Marketing), precisamos iniciar o setup na próxima semana.
             </p>
             
-            <div class="inline-flex gap-4 items-center justify-center text-pls-gold font-mono text-xl border border-pls-gold/30 px-6 py-3 rounded-lg bg-black/50">
+            <div class="inline-flex gap-2 md:gap-4 items-center justify-center text-pls-gold font-mono text-sm md:text-xl border border-pls-gold/30 px-4 py-2 rounded-lg bg-black/50">
                 <span>⚠️</span>
                 <span>PRAZO FINAL: 05/12/2025</span>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 bg-black text-center text-gray-600 text-sm">
-        &copy; 2025 Documento Confidencial. Desenvolvido exclusivamente para PLS Aviação Agrícola.
+    <footer class="py-6 bg-black text-center text-gray-600 text-xs">
+        &copy; 2025 Documento Confidencial. <br class="md:hidden"> Exclusivo para PLS Aviação Agrícola.
     </footer>
 
 </body>
