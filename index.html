@@ -9,9 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
-    <!-- Chosen Palette: PLS Premium Dark. Fundo #0f1c13 (Verde Profundo/Preto), Textos em Branco/Cinza, Acentos em #f59d24 (Ouro/Laranja) e #386a2c (Verde Brand). -->
-    <!-- Application Structure Plan: Design "Luxury Dark". 1. Hero Imersivo (Vídeo/Imagem escurecida). 2. A Tese (Por que agora?). 3. O Produto High-Ticket (Detalhes visuais). 4. A Oferta Grand Slam (Empilhamento de Bônus: Suporte + Mkt). 5. Preço e Ancoragem. 6. Urgência (Cronômetro visual até 05/12). -->
-    <!-- Visualization & Content Choices: Cards com efeito "Glassmorphism" (vidro fosco) para dar modernidade. Tipografia espaçada e hierarquia visual forte. Uso de gradientes sutis para evocar "amanhecer no campo" e "tecnologia". -->
+    <!-- Chosen Palette: PLS Premium Dark. -->
+    <!-- Application Structure Plan: Design "Luxury Dark" com foco em conversão High-Ticket. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <script>
@@ -20,10 +19,10 @@
                 extend: {
                     colors: {
                         pls: {
-                            dark: '#0a140d', // Quase preto, verde muito profundo
-                            green: '#386a2c', // Verde Marca
-                            gold: '#f59d24', // Laranja Marca (tratado como Dourado)
-                            light: '#afcb37', // Verde claro
+                            dark: '#0a140d',
+                            green: '#386a2c',
+                            gold: '#f59d24',
+                            light: '#afcb37',
                             glass: 'rgba(255, 255, 255, 0.05)',
                         }
                     },
@@ -74,7 +73,6 @@
 
     <!-- Hero Section -->
     <header class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <!-- Abstract Background Elements -->
         <div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/0a140d/386a2c?text=Tecnologia+Agro')] bg-cover bg-center opacity-20"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#0a140d] via-[#0a140d]/80 to-transparent"></div>
 
@@ -152,19 +150,16 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Feature 1 -->
                 <div class="glass-card p-8 rounded-xl hover:bg-white/5 transition duration-300">
                     <div class="text-4xl mb-4 grayscale hover:grayscale-0 transition duration-300">📱</div>
                     <h4 class="text-xl font-bold text-white mb-2">Mobile First Premium</h4>
                     <p class="text-gray-400 text-sm">Seu cliente está no campo, com o celular na mão. O site será mais rápido e bonito no iPhone/Android do que no computador.</p>
                 </div>
-                <!-- Feature 2 -->
                 <div class="glass-card p-8 rounded-xl hover:bg-white/5 transition duration-300">
                     <div class="text-4xl mb-4 grayscale hover:grayscale-0 transition duration-300">🎨</div>
                     <h4 class="text-xl font-bold text-white mb-2">Design Tech-Rural</h4>
                     <p class="text-gray-400 text-sm">Uma fusão elegante entre a robustez do agro e a sofisticação da aviação. Cores sóbrias, tipografia moderna.</p>
                 </div>
-                <!-- Feature 3 -->
                 <div class="glass-card p-8 rounded-xl hover:bg-white/5 transition duration-300">
                     <div class="text-4xl mb-4 grayscale hover:grayscale-0 transition duration-300">⚡</div>
                     <h4 class="text-xl font-bold text-white mb-2">Velocidade Extrema</h4>
@@ -176,7 +171,6 @@
 
     <!-- A OFERTA GRAND SLAM (Hormozi Style) -->
     <section id="oferta" class="py-24 relative overflow-hidden">
-        <!-- Background Glow -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pls-green/20 rounded-full blur-[120px] -z-10"></div>
 
         <div class="container mx-auto px-6 max-w-4xl">
@@ -187,13 +181,11 @@
             </div>
 
             <div class="glass-card rounded-3xl overflow-hidden border border-pls-gold/30">
-                <!-- Cabeçalho da Tabela -->
                 <div class="grid grid-cols-4 bg-white/5 p-6 border-b border-white/10 text-sm font-bold text-gray-400 uppercase tracking-wide">
                     <div class="col-span-3">Item Incluso</div>
                     <div class="col-span-1 text-right">Valor de Mercado</div>
                 </div>
 
-                <!-- Item Principal -->
                 <div class="grid grid-cols-4 p-6 border-b border-white/5 items-center">
                     <div class="col-span-3">
                         <h4 class="text-xl font-bold text-white">Desenvolvimento Web High-End (Institucional)</h4>
@@ -202,7 +194,6 @@
                     <div class="col-span-1 text-right text-lg font-medium text-gray-300">R$ 5.000,00</div>
                 </div>
 
-                <!-- BÔNUS 1 -->
                 <div class="grid grid-cols-4 p-6 border-b border-white/5 items-center bg-pls-green/10">
                     <div class="col-span-3">
                         <div class="flex items-center gap-3">
@@ -214,7 +205,6 @@
                     <div class="col-span-1 text-right text-lg font-medium text-pls-gold">R$ 2.400,00</div>
                 </div>
 
-                <!-- BÔNUS 2 -->
                 <div class="grid grid-cols-4 p-6 items-center bg-pls-green/20">
                     <div class="col-span-3">
                         <div class="flex items-center gap-3">
@@ -226,7 +216,6 @@
                     <div class="col-span-1 text-right text-lg font-medium text-pls-gold">R$ 2.000,00</div>
                 </div>
 
-                <!-- Total -->
                 <div class="bg-white/5 p-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
                     <div>
                         <p class="text-gray-400 text-sm uppercase font-bold">Valor Total Entregue</p>
@@ -242,9 +231,9 @@
                     </div>
                 </div>
 
-                <!-- CTA Botão -->
+                <!-- CTA Botão Atualizado -->
                 <div class="p-8 text-center bg-gradient-to-b from-transparent to-black/40">
-                    <a href="https://wa.me/5594991964997?text=Oi%2C%20vi%20a%20proposta%20High-Ticket%20da%20PLS.%20Vamos%20fechar%20o%20pacote%20de%203k%20com%20os%20b%C3%B4nus%20at%C3%A9%20dia%2005." target="_blank" class="glow-button w-full md:w-auto inline-block bg-pls-gold text-pls-dark font-black text-2xl py-5 px-16 rounded-xl uppercase tracking-wider hover:bg-white transition-colors">
+                    <a href="https://wa.me/557781539804?text=Oi%2C%20vi%20a%20proposta%20referente%20ao%20site%20da%20PLS.%20Vamos%20fechar%20o%20pacote%20de%203k%20com%20os%20b%C3%B4nus%20at%C3%A9%20dia%2005.%20Podemos%20negociar%20o%20pagamento%3F" target="_blank" class="glow-button w-full md:w-auto inline-block bg-pls-gold text-pls-dark font-black text-2xl py-5 px-16 rounded-xl uppercase tracking-wider hover:bg-white transition-colors">
                         Aceitar Proposta & Garantir Bônus
                     </a>
                     <p class="text-gray-500 text-sm mt-4 font-medium">
